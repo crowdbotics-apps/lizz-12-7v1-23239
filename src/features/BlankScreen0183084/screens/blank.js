@@ -48,11 +48,11 @@ export default class Blank extends React.Component {
               <Text style={styles.Text_48}>Likes</Text>
             </View>
             <View style={styles.View_25}>
-              <Icon name="star" style={styles.Icon_50} />
+              <Icon name="comment" style={styles.Icon_50} />
               <Text style={styles.Text_52}>Comments</Text>
             </View>
             <View style={styles.View_26}>
-              <Icon name="star" style={styles.Icon_49} />
+              <Icon name="share-alt" style={styles.Icon_49} />
               <Text style={styles.Text_51}>Shares</Text>
             </View>
           </View>
@@ -67,18 +67,8 @@ const styles = StyleSheet.create({
   View_3: {
     width: "100%",
     height: 20,
-    marginTop: 0,
-    marginBottom: 0,
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingTop: 0,
-    paddingBottom: 0,
-    backgroundColor: "#4125cb",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    alignContent: "stretch"
+    backgroundColor: "#257bcb",
+    alignItems: "center"
   },
   Text_5: { color: "#ffffff" },
   View_6: {
@@ -94,13 +84,31 @@ const styles = StyleSheet.create({
   Text_13: { marginTop: 0, marginBottom: 0 },
   Image_16: { height: 150 },
   View_23: { width: "100%", flexDirection: "row" },
-  View_24: { width: "033.3%", flexDirection: "row" },
+  View_24: {
+    width: "033.3%",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center"
+  },
   Icon_45: { marginTop: 0, marginBottom: 0, fontSize: 40 },
   Text_48: { paddingLeft: 0, paddingRight: 0, fontSize: 11 },
-  View_25: { width: "033.3%", flexDirection: "row" },
+  View_25: {
+    width: "033.3%",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center"
+  },
   Icon_50: { marginTop: 0, marginBottom: 0, fontSize: 40 },
   Text_52: { paddingLeft: 0, paddingRight: 0, fontSize: 11 },
-  View_26: { width: "033.3%", flexDirection: "row" },
+  View_26: {
+    width: "033.3%",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center"
+  },
   Icon_49: { marginTop: 0, marginBottom: 0, fontSize: 40 },
   Text_51: { paddingLeft: 0, paddingRight: 0, fontSize: 11 }
 })
