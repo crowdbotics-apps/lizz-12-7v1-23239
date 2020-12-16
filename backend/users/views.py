@@ -10,7 +10,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from twilio.base import exceptions as twilio_exceptions
 
-from fmwk_modules_22844.twilio_utils import send_verification_token_sms, check_verification_token
+# modified
+from lizz_demo_12_8_23239.twilio_utils import send_verification_token_sms, check_verification_token
 
 User = get_user_model()
 
