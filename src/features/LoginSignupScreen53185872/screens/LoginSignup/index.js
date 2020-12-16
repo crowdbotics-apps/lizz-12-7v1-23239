@@ -91,7 +91,7 @@ class SignUpComponent extends React.Component {
       this.setState({ fbLoading: false, });
       if (signinResponse && signinResponse.data) {
         //success, navigate home
-        NavigationService.navigate('BlankScreen3177788')
+        NavigationService.navigate('BlankScreen0183084')
       } else if (signinResponse && signinResponse.error) {
         //handle special cases
       }
