@@ -14,11 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+# modified
+from django.urls import path, include, re_path
 from allauth.account.views import confirm_email
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
+# added
+from users.views import RequestPasswordResetPhoneNumber, VerifyPasswordResetPhoneNumber
 
 urlpatterns = [
     path("", include("home.urls")),
@@ -28,8 +32,14 @@ urlpatterns = [
     path("users/", include("users.urls", namespace="users")),
     path("rest-auth/", include("rest_auth.urls")),
     # Override email confirm to use allauth's HTML view instead of rest_auth's API view
+    
+    # added
+    re_path(r"rest-auth/password/reset/phone/request/?", RequestPasswordResetPhoneNumber.as_view()),
+    re_path(r"rest-auth/password/reset/phone/verify/?", VerifyPasswordResetPhoneNumber.as_view()),
+    
     path("rest-auth/registration/account-confirm-email/<str:key>/", confirm_email),
     path("rest-auth/registration/", include("rest_auth.registration.urls")),
+    
 ]
 
 admin.site.site_header = "lizz 12-7v1"
