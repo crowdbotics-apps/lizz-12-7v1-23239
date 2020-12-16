@@ -14,12 +14,13 @@ const sagaMiddleware = createSagaMiddleware();
  */
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const middlewares = [sagaMiddleware /** more middlewares if any goes here */];
+const middlewares = [sagaMiddleware, thunk /** more middlewares if any goes here */]; /* modified */
 
 const store = createStore(
   combineReducers({
       apiReducer: apiReducer,
-      customReducer: customReducer
+      customReducer: customReducer,
+      authReducer: authReducer /* added */
   }),
   composeEnhancers(applyMiddleware(...middlewares))
 );
